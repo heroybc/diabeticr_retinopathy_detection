@@ -3,8 +3,8 @@
 ### 此项目是@yangbinchao @zhaokaifei 眼球病变检测
 
 ## 0. data
-#### 数据集下载：[点击跳转](https://www.kaggle.com/c/diabetic-retinopathy-detection/data)
-#### 数据集下载脚本：[点击跳转](https://github.com/gregwchase/eyenet/blob/master/src/download_data.sh)
+数据集下载：[点击跳转](https://www.kaggle.com/c/diabetic-retinopathy-detection/data)
+数据集下载脚本：[点击跳转](https://github.com/gregwchase/eyenet/blob/master/src/download_data.sh)
 
 ## 1. train
 `python3 train.py`
