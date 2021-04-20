@@ -1,0 +1,29 @@
+
+# txt files
+*.txt
+
+# json files
+*.json
+*.odgt
+
+# models
+*.pth
+*.pt
+*.ckpt
+
+# python cache
+*__pycache__*
+
+# images
+*.jpg
+*.png
+*.xml
+
+cocoapi
+<<<<<<< HEAD
+# zip
+=======
+
+>>>>>>> 5617606a21ed64fce9026b64b50e4826f3b96def
+*.zip
+
