@@ -5,6 +5,7 @@
 # json files
 *.json
 *.odgt
+*.csv
 
 # models
 *.pth
@@ -16,6 +17,7 @@
 
 # images
 *.jpg
+*.jpeg
 *.png
 *.xml
 
