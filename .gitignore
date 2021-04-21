@@ -3,9 +3,9 @@
 *.txt
 
 # json files
-*.json
+#*.json
 *.odgt
-*.csv
+#*.csv
 
 # models
 *.pth

@@ -30,7 +30,7 @@ def get_args():
     parser.add_argument('--img_size',  default=(380,380),help='the input image size')
     parser.add_argument('--img_dirs_train', type=str, default='../data/sample/sample',help='Input train datasets path')  # ../data/train
     parser.add_argument('--img_dirs_val', type=str, default='../data/sample/sample', help='Input val datasets path')
-    parser.add_argument('--label_path', type=str, default='../data/sample/sampleSubmission.csv', help='Input label datasets path')
+    parser.add_argument('--label_path', type=str, default='../data/drd_data_all/labels_traintest.json', help='Input label datasets path')
     parser.add_argument('--batch_size', default= 128 ,help='the batch size')
     parser.add_argument('--epoch', default= 8 , help='the number of epoch')
     parser.add_argument('--save_modeldir', default="./checkpoint", help='the save model path')

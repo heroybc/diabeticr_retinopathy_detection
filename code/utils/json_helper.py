@@ -16,6 +16,7 @@ def load_json_items(json_path):
     """
     with open(json_path, "r") as f:
         json_items = [json.loads(s) for s in f.readlines()]
+       # print(json_items)
     return json_items
 
 

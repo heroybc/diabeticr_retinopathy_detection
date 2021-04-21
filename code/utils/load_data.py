@@ -16,10 +16,12 @@ from tqdm import tqdm
 import glob
 from torch.utils.data import BatchSampler,DistributedSampler,Dataset, DataLoader
 
+from json_helper import save_json_items,load_json_items
+
 def read_csv_label(csv_input_name = '../../data/sample/sampleSubmission.csv'):
 
     #csv_input_name = '../../data/sample/sampleSubmission.csv'
-    json_output_name = '../../data/sample/all_labels.json' 
+    #json_output_name = '../../data/sample/all_labels.json' 
     label_dict = {}
     label_json = []
 
@@ -83,8 +85,8 @@ class MyDataLoader(Dataset):
         label = []
         label_dict = {}
         print('the path of label is {}'.format(self.label_dir))
-        label_dict = read_csv_label(self.label_dir)
-        label.append(label_dict[imgname])
+        label_dict = load_json_items(self.label_dir)
+        label.append(label_dict['label_fine'])
         #imgname = int(imgname)
         #label.append(int(imgname/10))    # 标注按照情况修改
 
@@ -141,7 +143,7 @@ def collate_fn(batch):
         
 if __name__ == "__main__":
     
-    dataset = MyDataLoader(['../data/sample/sample'], (380, 380))   
+    dataset = MyDataLoader(['../data/sample/sample'], ['../data/drd_data_all/labels_traintest.json'],(380, 380))   
     dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=2, collate_fn=collate_fn)
     print('data length is {}'.format(len(dataset)))
     for imgs, labels, lengths in dataloader:
