@@ -11,7 +11,7 @@ from torchvision.models import resnet50
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--use-cuda', action='store_true', default=False,help='Use NVIDIA GPU acceleration')
-    parser.add_argument('--image_test_path', type=str, default='./demo/test.jpg',help='Input image path')
+    parser.add_argument('--image_test_path', type=str, default='../../test_img/cbam_test_img_example/test.jpg',help='Input image path')
     parser.add_argument('--method', type=str, default='gradcam', help='Can be gradcam/gradcam++/scorecam')
 
     args = parser.parse_args()
